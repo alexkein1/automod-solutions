@@ -30,7 +30,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 nav ul li {
@@ -81,6 +81,24 @@ header p {
 
 .btn:hover {
     background-color: #4851c9;
+}
+
+.profile-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.avatar-mini {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 section {

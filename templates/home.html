@@ -11,7 +11,11 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="/auth">Войти</a></li>
+                {% if user %}
+                    <li><a href="/profile">Профиль</a></li>
+                {% else %}
+                    <li><a href="/auth">Войти</a></li>
+                {% endif %}
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
@@ -19,7 +23,15 @@
         <header>
             <h1>Automod Solutions</h1>
             <p>"Мы ограничиваемся лишь фантазией" - чего у меня как раз таки и нету</p>
-            <a href="/auth" class="btn">Войти</a>
+            {% if user %}
+                <div class="profile-mini">
+                    <img src="https://cdn.discordapp.com/avatars/{{ user['id'] }}/{{ user['avatar'] }}.png" alt="User Avatar" class="avatar-mini">
+                    <p>{{ user['username'] }}</p>
+                    <a href="/profile" class="btn">Посмотреть профиль</a>
+                </div>
+            {% else %}
+                <a href="/auth" class="btn">Войти</a>
+            {% endif %}
         </header>
         <section id="about">
             <h2>О нас</h2>
@@ -27,8 +39,9 @@
         </section>
         <section id="contact">
             <h2>Контакты</h2>
-            <p>Вопросы? Предложения? Рад выслушать, пишите в мне в дс: <a href="https://discord.com/users/627594217232924695">alexkein</a></p>
+            <p>Вопросы? Предложения? Рад выслушать, пишите мне в дс: <a href="https://discord.com/users/627594217232924695">alexkein</a></p>
         </section>
     </div>
 </body>
 </html>
+
