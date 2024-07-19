@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш профиль</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='authorize.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile">
+            <img src="https://cdn.discordapp.com/avatars/{{ user['id'] }}/{{ user['avatar'] }}.png" alt="User Avatar" class="avatar">
+            <p>ID: {{ user['id'] }}</p>
+            <p>Username: {{ user['username'] }}</p>
+        </div>
+        <a href="/">
+            <button class="btn">На главную</button>
+        </a>
+    </div>
+</body>
+</html>

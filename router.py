@@ -58,12 +58,12 @@ def callback():
         'Content-Type': 'application/x-www-form-urlencoded'
     }
 
-    # Get the token
+    # По идее здесь токен нада вытащить
     response = requests.post(TOKEN_URL, data=data, headers=headers)
     response.raise_for_status()
     token = response.json().get('access_token')
 
-    # Get user info
+    # Вытаскиваем инфу
     headers = {
         'Authorization': f'Bearer {token}'
     }
@@ -84,12 +84,7 @@ def callback():
 def profile():
     user = session.get('user')
     if user:
-        return f"""
-            <h1>User Profile</h1>
-            <p>ID: {user['id']}</p>
-            <p>Username: {user['username']}</p>
-            <img src="https://cdn.discordapp.com/avatars/{user['id']}/{user['avatar']}.png" alt="User Avatar">
-        """
+        return render_template('profile.html', user=user)
     else:
         return redirect(url_for('auth'))
 
