@@ -17,6 +17,7 @@ USER_URL = f'{API_BASE_URL}/users/@me'
 
 @app.route("/")
 def home():
+    user = session.get('user')
     return render_template("home.html", user=user)
 
 
