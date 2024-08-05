@@ -1,3 +1,4 @@
+from token_storage import *
 from flask import *
 import requests
 import os
@@ -7,7 +8,7 @@ app.secret_key = os.urandom(24)
 CDN_ROUTE = 'cdn'
 
 CLIENT_ID = '875289893188816946'
-CLIENT_SECRET = 'Fm1t2wNMqkF2913xIGA9xywrjOAdE9n2'
+CLIENT_SECRET = client_secret
 REDIRECT_URI = 'https://automodsolutions.ru/auth/callback'
 API_BASE_URL = 'https://discord.com/api/v10'
 OAUTH2_URL = f'{API_BASE_URL}/oauth2/authorize'
