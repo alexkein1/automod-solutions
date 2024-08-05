@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automod Solutions</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff6f00;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ff6f00;
+        }
+        header p {
+            margin: 0;
+            font-style: italic;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1e1e1e;
+            padding: 10px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #ff6f00;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        .section h2 {
+            color: #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .project {
+            background-color: #292929;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            flex: 1 1 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .project img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .project h3 {
+            margin: 10px 0;
+            color: #ff6f00;
+        }
+        footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #ff6f00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Automod Solutions</h1>
+        <p>Мы ограничиваемся лишь фантазией</p>
+    </header>
+    <nav>
+        <a href="#about">О себе</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#projects">Проекты</a>
+    </nav>
+    <div class="content">
+        <div id="about" class="section">
+            <h2>О себе</h2>
+            <p>Automod Solutions - это команда, которая занимается созданием различных проектов, ограничиваясь лишь фантазией. Мы создаем ботов для Discord, веб-приложения и другие интересные проекты.</p>
+        </div>
+        <div id="contacts" class="section">
+            <h2>Контакты</h2>
+            <p>Email: info@automodsolutions.com</p>
+            <p>Телефон: +7 123 456 7890</p>
+            <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+        </div>
+        <div id="projects" class="section">
+            <h2>Проекты</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="https://cdn.discordapp.com/avatars/875289893188816946/1babea36a1f1006b778dd223b917299a.png?size=1024&format=webp&quality=lossless&width=0&height=256" alt="R3700">
+                    <h3>R3700</h3>
+                    <p>Бот для Discord с множеством функций и возможностей.</p>
+                </div>
+                <div class="project">
+                    <img src="https://cdn.discordapp.com/avatars/1166122534761144411/a_90b9ec85566cb0e9d946e61457a4e364.gif?size=1024&width=0&height=256" alt="Starfall">
+                    <h3>Starfall</h3>
+                    <p>Ещё один бот для Discord, который удивит вас своими функциями.</p>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/100" alt="Better GD Rich Presence">
+                    <h3>Better GD Rich Presence</h3>
+                    <p>Проект на GitHub, ссылка будет добавлена позже.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Automod Solutions. Все права защищены.</p>
+    </footer>
+</body>
+</html>

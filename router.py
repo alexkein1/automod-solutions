@@ -40,6 +40,11 @@ def authorize():
     return render_template('authorize.html')
 
 
+@app.route('/alt')
+def alternative_site():
+    return render_template('alt_site.html')
+
+
 @app.route('/auth/login')
 def login():
     return redirect(f'{OAUTH2_URL}?client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&response_type=code&scope=identify')
